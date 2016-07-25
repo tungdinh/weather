@@ -15,9 +15,9 @@ app.get('/', function(req, res){
 
 app.post('/post', function(req, res){
   var parsed_url = url.format({
-    pathname: 'https://openweathermap.org/find',
+    pathname: 'http://api.openweathermap.org/data/2.5/forecast',
     query: {
-      access_token: process.env.WEATHER_ACCESS,
+      APPID: process.env.WEATHER_ACCESS,
       q: req.body.text
     }
   });
